@@ -1,9 +1,9 @@
 class LpAwsSaml < Formula
   desc ""
   homepage ""
-  url "https://github.com/springload/lp-aws-saml/releases/download/v0.1/lp-aws-saml_0.1_darwin_amd64.tar.gz"
-  version "0.1"
-  sha256 "92bf55ad30e918721a9b8218f583659a0a6a4c9055dca0cab87190360b804b3c"
+  url "https://github.com/springload/lp-aws-saml/releases/download/v0.2/lp-aws-saml_0.2_darwin_amd64.tar.gz"
+  version "0.2"
+  sha256 "f0e6867bd4196c430ed8f709628e3d13a31785f37751884e944fc37cf1c00d12"
 
   def install
     bin.install "lp-aws-saml"
