@@ -114,23 +114,11 @@ class DownloadStrategyDetector
     module Compat
       def detect(url, using = nil)
         strategy = super
-        require_aws_sdk if strategy == S3DownloadStrategy
         strategy
       end
 
       def detect_from_url(url)
-        case url
-        when %r{^s3://}
-          odeprecated("s3://",
-            "maintaining S3DownloadStrategy in your own formula or tap")
-          S3DownloadStrategy
-        when %r{^scp://}
-          odeprecated("scp://",
-            "maintaining ScpDownloadStrategy in your own formula or tap")
-          ScpDownloadStrategy
-        else
-          super(url)
-        end
+        super(url)
       end
 
       def detect_from_symbol(symbol)
