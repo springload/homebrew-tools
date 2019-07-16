@@ -14,7 +14,7 @@ class Terragrunt < Formula
   # adds the file manifests to fix local development
   patch do
     url "https://patch-diff.githubusercontent.com/raw/gruntwork-io/terragrunt/pull/774.diff"
-    sha256 "9f77acddce7673a153588b22769496795f54dc7d9fa53f5c3fdda0b77206d3f6"
+    sha256 "c41989ace2f4974e3fdc9e73c762be6134b4a775a23d6609f5d0d46e81418a1f"
   end
 
   depends_on "dep" => :build
