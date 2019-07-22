@@ -2,9 +2,9 @@
 class EcsTool < Formula
   desc ""
   homepage ""
-  url "https://github.com/springload/ecs-tool/releases/download/1.2/ecs-tool_1.2_darwin_amd64.tar.gz"
-  version "1.2"
-  sha256 "a494a4159576ea21ad2faab943451711cbc257e669716a36b64fd980d9f12f81"
+  url "https://github.com/springload/ecs-tool/releases/download/1.2.1/ecs-tool_1.2.1_darwin_amd64.tar.gz"
+  version "1.2.1"
+  sha256 "d73adafb542ce6d3658651c5f71fe1e164bd851599378d95c219fbd0dde4163b"
 
   def install
     bin.install "ecs-tool"
