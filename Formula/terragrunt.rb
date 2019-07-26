@@ -1,8 +1,8 @@
 class Terragrunt < Formula
   desc "Thin wrapper for Terraform e.g. for locking state"
   homepage "https://github.com/gruntwork-io/terragrunt"
-  url "https://github.com/gruntwork-io/terragrunt/archive/v0.19.8.tar.gz"
-  sha256 "cf0b9b500c7162ffd915f2bc302d4757c10d618cf3e72ee7cc6611a20cdaa040"
+  url "https://github.com/gruntwork-io/terragrunt/archive/v0.19.11.tar.gz"
+  sha256 "0529966806bf4f6e8297e633f15e6d0064d2792646b2f7b246dd6d0038369584"
   head "https://github.com/gruntwork-io/terragrunt.git"
 
   # adds the terraform_binary to the config from https://github.com/gruntwork-io/terragrunt/pull/751/files
