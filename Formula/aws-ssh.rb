@@ -2,9 +2,9 @@ require_relative "../custom_download_strategy"
 class AwsSsh < Formula
   desc ""
   homepage ""
-  url "https://github.com/springload/aws-ssh/releases/download/v0.6/aws-ssh_0.6_darwin_amd64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
-  version "0.6"
-  sha256 "687a7e3ae161c777c70117fd15447bc00cd1818bd05a8d64696a8775d8d04b15"
+  url "https://github.com/springload/aws-ssh/releases/download/v0.7/aws-ssh_0.7_darwin_amd64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
+  version "0.7"
+  sha256 "3bd05db2509fc4d07f36e3f89fb88f4e80e3f98a780a983022829252b4f1b2e0"
 
   def install
     bin.install "aws-ssh"
