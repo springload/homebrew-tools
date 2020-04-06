@@ -3,16 +3,16 @@ require_relative "../custom_download_strategy"
 class Cssh < Formula
   desc ""
   homepage ""
-  version "0.0.7"
+  version "0.0.8"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/springload/cssh/releases/download/v0.0.7/cssh_0.0.7_darwin_amd64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
-    sha256 "e93a3e76f121359145100f1693dce07279b3280819b24f17b8381b0f1f052512"
+    url "https://github.com/springload/cssh/releases/download/v0.0.8/cssh_0.0.8_darwin_amd64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
+    sha256 "f050f2181059961102065b343e5fbe780e2a80f2162e30786ed1aaf852d71920"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/springload/cssh/releases/download/v0.0.7/cssh_0.0.7_linux_amd64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "4b61e34377ce3cf62ea4af876c80c9e02626d7cb87be3e8cc86ed30c7133c9cb"
+      url "https://github.com/springload/cssh/releases/download/v0.0.8/cssh_0.0.8_linux_amd64.tar.gz", :using => GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "0b6a607db2e235a2f35044f36e954113a2f97acae8b958aaf69db90a4881f537"
     end
   end
 
