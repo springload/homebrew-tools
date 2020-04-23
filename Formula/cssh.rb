@@ -2,16 +2,16 @@
 class Cssh < Formula
   desc ""
   homepage ""
-  version "0.1.4"
+  version "0.2.0"
   bottle :unneeded
 
   if OS.mac?
-    url "https://springload-software.s3-ap-southeast-2.amazonaws.com/cssh/0.1.4/cssh_0.1.4_darwin_amd64.tar.gz"
-    sha256 "3a59ae06e396160cf27a100f083d19e68a6d2899e95be911d2aa07b8c0f51bcf"
+    url "https://springload-software.s3-ap-southeast-2.amazonaws.com/cssh/0.2.0/cssh_0.2.0_darwin_amd64.tar.gz"
+    sha256 "e7b787076122ea0fac3823df15163707b61c6f621f9e4ce91ed5b38aa37a9725"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://springload-software.s3-ap-southeast-2.amazonaws.com/cssh/0.1.4/cssh_0.1.4_linux_amd64.tar.gz"
-      sha256 "3243146ecb4c048c8c107333e87fb86af0c920c158021e044bd6fe34e7591555"
+      url "https://springload-software.s3-ap-southeast-2.amazonaws.com/cssh/0.2.0/cssh_0.2.0_linux_amd64.tar.gz"
+      sha256 "606aa919942e0c9a4fa1474199034792f7288f0c63fb199024ad6aad241f24c8"
     end
   end
 
