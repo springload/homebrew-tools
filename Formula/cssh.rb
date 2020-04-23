@@ -7,11 +7,11 @@ class Cssh < Formula
 
   if OS.mac?
     url "https://springload-software.s3-ap-southeast-2.amazonaws.com/cssh/0.2.0/cssh_0.2.0_darwin_amd64.tar.gz"
-    sha256 "e7b787076122ea0fac3823df15163707b61c6f621f9e4ce91ed5b38aa37a9725"
+    sha256 "5b823388282a1c63699df1eb0796bb0d852915895b6d1a6d2d5d5ff9801e1be7"
   elsif OS.linux?
     if Hardware::CPU.intel?
       url "https://springload-software.s3-ap-southeast-2.amazonaws.com/cssh/0.2.0/cssh_0.2.0_linux_amd64.tar.gz"
-      sha256 "606aa919942e0c9a4fa1474199034792f7288f0c63fb199024ad6aad241f24c8"
+      sha256 "f35f6997ff52d5d83ead5368eb9baa5391d0c1522f0c579861071ebb679920f3"
     end
   end
 
