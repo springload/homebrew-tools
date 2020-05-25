@@ -2,16 +2,16 @@
 class LpAwsSaml < Formula
   desc "Temporary Credentials for AWS CLI for LastPass SAML login"
   homepage "https://github.com/springload/lp-aws-saml"
-  version "0.6"
+  version "0.7"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/springload/lp-aws-saml/releases/download/v0.6/lp-aws-saml_0.6_darwin_amd64.tar.gz"
-    sha256 "a9780cbd8d54134f4d5fe7d64a0370fdb9c9baf487225cc7c184a07a63900139"
+    url "https://github.com/springload/lp-aws-saml/releases/download/v0.7/lp-aws-saml_0.7_darwin_amd64.tar.gz"
+    sha256 "35dcc21b4fa47e70172af7d3d8b84b66d4aadfb4c6a4cd076a4a1e7aa63b27fe"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/springload/lp-aws-saml/releases/download/v0.6/lp-aws-saml_0.6_linux_amd64.tar.gz"
-      sha256 "4fefe980f2308a8bee81f2ed5901c968ff5a10091ecbffddfa21700bf4a11860"
+      url "https://github.com/springload/lp-aws-saml/releases/download/v0.7/lp-aws-saml_0.7_linux_amd64.tar.gz"
+      sha256 "70edf33a61494861c306f9d5f9edbf2b5a8d5575b3bc0743ec084d5e63a92b93"
     end
   end
 
