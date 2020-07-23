@@ -2,29 +2,30 @@
 class Cssh < Formula
   desc ""
   homepage ""
-  version "0.2.3"
+  version "0.2.4"
   bottle :unneeded
 
   if OS.mac?
-    url "https://springload-software.s3-ap-southeast-2.amazonaws.com/cssh/0.2.3/cssh_0.2.3_darwin_amd64.tar.gz"
-    sha256 "3d196f3972d9064fc319e50e4c0ba97216e8657d227a8909ae9ec42c79165bc1"
+    url "https://springload-software.s3-ap-southeast-2.amazonaws.com/cssh/0.2.4/cssh_client_0.2.4_darwin_amd64.tar.gz"
+    sha256 "378ab799b44c096b3410485ade95248342f733b7bb646a7b6bc8350da8f975a4"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://springload-software.s3-ap-southeast-2.amazonaws.com/cssh/0.2.3/cssh_0.2.3_linux_amd64.tar.gz"
-      sha256 "2a0fe70860b5abb3361b1ba2634a5cd6d05ceb3601e06da4af0110c5043aa7d9"
+      url "https://springload-software.s3-ap-southeast-2.amazonaws.com/cssh/0.2.4/cssh_client_0.2.4_linux_amd64.tar.gz"
+      sha256 "51fb36f4732f3b82afd3694c041a6309f1bfb5bca9dff6e01448bd483fd30815"
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://springload-software.s3-ap-southeast-2.amazonaws.com/cssh/0.2.3/cssh_0.2.3_linux_arm64.tar.gz"
-        sha256 "3b7531de833b49c015eb1aa0b1f8abaab347b0ec3e9d611f1eb10e92fc97b8e4"
+        url "https://springload-software.s3-ap-southeast-2.amazonaws.com/cssh/0.2.4/cssh_client_0.2.4_linux_arm64.tar.gz"
+        sha256 "602e8e08512e2fa0aac0ca39ba119eb3c8b55c8a3aab1dc7bcf4e073417d3fbe"
       else
-        url "https://springload-software.s3-ap-southeast-2.amazonaws.com/cssh/0.2.3/cssh_0.2.3_linux_armv6.tar.gz"
-        sha256 "6aa484ff99895304b107c608a434812e79dc2ca88ae9ffb0d6dcccfb7f78b83e"
+        url "https://springload-software.s3-ap-southeast-2.amazonaws.com/cssh/0.2.4/cssh_client_0.2.4_linux_armv6.tar.gz"
+        sha256 "39a92797fa19a63a4fab255d6dbe9585bb0630b5eb95865bf926112141d18437"
       end
     end
   end
 
   def install
+    bin.install "cssh"
     bin.install "cssh"
   end
 end
