@@ -2,16 +2,16 @@
 class EcsTool < Formula
   desc ""
   homepage ""
-  version "1.5.5"
+  version "1.6"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/springload/ecs-tool/releases/download/1.5.5/ecs-tool_1.5.5_darwin_amd64.tar.gz"
-    sha256 "58f6fddc29d97ae74213176a51e0bdf94aa375dba1a58608ebcba42e700f2a5c"
+    url "https://github.com/springload/ecs-tool/releases/download/1.6/ecs-tool_1.6_darwin_amd64.tar.gz"
+    sha256 "06ecc98bc39cb5a1bf63fa6b687fa010c4f2f41881d7e6c08b4a0a5f8c0fa99c"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/springload/ecs-tool/releases/download/1.5.5/ecs-tool_1.5.5_linux_amd64.tar.gz"
-      sha256 "c747b42bd674b85398bb65425cacb0039704b0c3d96abc245d1b13fac0545e55"
+      url "https://github.com/springload/ecs-tool/releases/download/1.6/ecs-tool_1.6_linux_amd64.tar.gz"
+      sha256 "96bea0151ef7c7c7d5a31ae53ac424cdbfd061634e8c70ddd55a9c6b8e002f89"
     end
   end
 
