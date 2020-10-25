@@ -7,11 +7,11 @@ class EcsTool < Formula
 
   if OS.mac?
     url "https://github.com/springload/ecs-tool/releases/download/1.6/ecs-tool_1.6_darwin_amd64.tar.gz"
-    sha256 "06ecc98bc39cb5a1bf63fa6b687fa010c4f2f41881d7e6c08b4a0a5f8c0fa99c"
+    sha256 "7936c1aefa079700115c6ad53526c2587babd0f5b3e30119dc18a742f08ba072"
   elsif OS.linux?
     if Hardware::CPU.intel?
       url "https://github.com/springload/ecs-tool/releases/download/1.6/ecs-tool_1.6_linux_amd64.tar.gz"
-      sha256 "96bea0151ef7c7c7d5a31ae53ac424cdbfd061634e8c70ddd55a9c6b8e002f89"
+      sha256 "27702a0d3da057cd3c3e7596782f9e03bfc16ea6cf24c026e2d0c5e915093c9b"
     end
   end
 
