@@ -2,30 +2,27 @@
 class Cssh < Formula
   desc ""
   homepage ""
-  version "0.3.1"
+  version "0.3.2"
   bottle :unneeded
 
   if OS.mac?
-    url "https://springload-software.s3-ap-southeast-2.amazonaws.com/cssh/0.3.1/cssh_client_0.3.1_darwin_amd64.tar.gz"
-    sha256 "5d21da7d8b4e368ec0e235053d2be6c5c4e34ed0df433d0e4c545c6cea2c1aa3"
-  elsif OS.linux?
-    if Hardware::CPU.intel?
-      url "https://springload-software.s3-ap-southeast-2.amazonaws.com/cssh/0.3.1/cssh_client_0.3.1_linux_amd64.tar.gz"
-      sha256 "bd00f90324380e0d49f8ca8a32793dc94561eb9e4ef1b123067d63b9dd0dff4e"
-    end
-    if Hardware::CPU.arm?
-      if Hardware::CPU.is_64_bit?
-        url "https://springload-software.s3-ap-southeast-2.amazonaws.com/cssh/0.3.1/cssh_client_0.3.1_linux_arm64.tar.gz"
-        sha256 "f3270e572cb34c2198c5e3716c8b256c70991c0694556e98bebd43cc5790255c"
-      else
-        url "https://springload-software.s3-ap-southeast-2.amazonaws.com/cssh/0.3.1/cssh_client_0.3.1_linux_armv6.tar.gz"
-        sha256 "59a46914f3c2f10e32d065f6a226392712c9939fea01dd3c6d64677ec9461c23"
-      end
-    end
+    url "https://springload-software.s3-ap-southeast-2.amazonaws.com/cssh/0.3.2/cssh_client_0.3.2_darwin_amd64.tar.gz"
+    sha256 "e0d4942d24657ac836adbb21c35f9f10b6bff1611c5723ba3361f25225a2d08b"
+  end
+  if OS.linux? && Hardware::CPU.intel?
+    url "https://springload-software.s3-ap-southeast-2.amazonaws.com/cssh/0.3.2/cssh_client_0.3.2_linux_amd64.tar.gz"
+    sha256 "d6b5732d2d3e34fcd9a11cbed9c8b0b48feee7945675f320f905b6379a58ce20"
+  end
+  if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+    url "https://springload-software.s3-ap-southeast-2.amazonaws.com/cssh/0.3.2/cssh_client_0.3.2_linux_armv6.tar.gz"
+    sha256 "96fb2fb12a93caff3da4e9e142fe7e83c4c7a052aafee97f6a94bb0f53876160"
+  end
+  if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+    url "https://springload-software.s3-ap-southeast-2.amazonaws.com/cssh/0.3.2/cssh_client_0.3.2_linux_arm64.tar.gz"
+    sha256 "1dd3aab3bab52520d20a29797cf4d879e918af9b78105f41ef10cd090710d183"
   end
 
   def install
-    bin.install "cssh"
     bin.install "cssh"
   end
 end
