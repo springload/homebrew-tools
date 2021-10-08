@@ -5,20 +5,20 @@
 class AwsSsh < Formula
   desc ""
   homepage ""
-  version "2.2.0"
+  version "2.2.1"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/springload/aws-ssh/releases/download/v2.2.0/aws-ssh_2.2.0_darwin_amd64.tar.gz"
-      sha256 "8f2cfc78604fa510a1de38d76cf39c4e32573da4ae604a0fa3ede1041a8adc49"
+      url "https://github.com/springload/aws-ssh/releases/download/v2.2.1/aws-ssh_2.2.1_darwin_amd64.tar.gz"
+      sha256 "8ba5be6bd8e774023efb495dd2d450dfc977156b60b179c43d493d7b1e8336e9"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/springload/aws-ssh/releases/download/v2.2.0/aws-ssh_2.2.0_linux_amd64.tar.gz"
-      sha256 "6754e170c94ab533618c46cb8dd92670abf3a682f176b3e01f21e84a9ec35974"
+      url "https://github.com/springload/aws-ssh/releases/download/v2.2.1/aws-ssh_2.2.1_linux_amd64.tar.gz"
+      sha256 "5282dcab4985bf572c70be05a4dd10619cc847ed48942d59b4249a67777b77ab"
     end
   end
 
