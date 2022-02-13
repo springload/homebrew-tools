@@ -5,12 +5,20 @@
 class AwsSsh < Formula
   desc ""
   homepage ""
-  version "2.2.5"
+  version "2.2.6"
 
   on_macos do
+    if Hardware::CPU.arm?
+      url "https://github.com/springload/aws-ssh/releases/download/v2.2.6/aws-ssh_2.2.6_darwin_arm64.tar.gz"
+      sha256 "2e7713f0efe3c8f48af164a5820d90cf214096dbf6d886ee3722699662441d21"
+
+      def install
+        bin.install "aws-ssh"
+      end
+    end
     if Hardware::CPU.intel?
-      url "https://github.com/springload/aws-ssh/releases/download/v2.2.5/aws-ssh_2.2.5_darwin_amd64.tar.gz"
-      sha256 "3e6c9940d23f92c9fefa289478c76cf1ca7a3b7848c1c6dc42f7b4aaf2b263b9"
+      url "https://github.com/springload/aws-ssh/releases/download/v2.2.6/aws-ssh_2.2.6_darwin_amd64.tar.gz"
+      sha256 "ea9e093264a8246f2d7de380fa9df273742597d922b6fbc162f5ee253b86ce35"
 
       def install
         bin.install "aws-ssh"
@@ -19,9 +27,17 @@ class AwsSsh < Formula
   end
 
   on_linux do
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/springload/aws-ssh/releases/download/v2.2.6/aws-ssh_2.2.6_linux_arm64.tar.gz"
+      sha256 "8b5c86f3b8697eb1d7547e654eee34ef639a8d006d59ca0a4bbe5e1c587a0095"
+
+      def install
+        bin.install "aws-ssh"
+      end
+    end
     if Hardware::CPU.intel?
-      url "https://github.com/springload/aws-ssh/releases/download/v2.2.5/aws-ssh_2.2.5_linux_amd64.tar.gz"
-      sha256 "9027e2850b0caa51048dd83d0bb499cd66bd0462b24e1dc050ce6bc9ba6dec51"
+      url "https://github.com/springload/aws-ssh/releases/download/v2.2.6/aws-ssh_2.2.6_linux_amd64.tar.gz"
+      sha256 "47cd214a833c7a559b8b9cddf49b261c6d1bc622722efcfe3357806ff40b0e32"
 
       def install
         bin.install "aws-ssh"
