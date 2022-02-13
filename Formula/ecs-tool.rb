@@ -5,24 +5,35 @@
 class EcsTool < Formula
   desc ""
   homepage ""
-  version "1.9.0"
-  bottle :unneeded
+  version "1.9.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/springload/ecs-tool/releases/download/1.9.0/ecs-tool_1.9.0_darwin_amd64.tar.gz"
-      sha256 "363358ecb5a5853d4a977962556fe400897eee1ef6c8575771376eaebc4b5b8f"
+      url "https://github.com/springload/ecs-tool/releases/download/1.9.1/ecs-tool_1.9.1_darwin_amd64.tar.gz"
+      sha256 "b3661b0e92914f523e1b7b9707c892653871404e0ea41f2d21f963cea09c4f00"
+
+      def install
+        bin.install "ecs-tool"
+      end
     end
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/springload/ecs-tool/releases/download/1.9.0/ecs-tool_1.9.0_linux_amd64.tar.gz"
-      sha256 "70d924206850f627aaea26c7446365cbd332ec8d3dd0a72cca8ecb1e9182de95"
-    end
-  end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/springload/ecs-tool/releases/download/1.9.1/ecs-tool_1.9.1_linux_arm64.tar.gz"
+      sha256 "75259dd5a0da47444417037334bb56c5e0fcd2e8c27c0b3cfa85a8efc975d2ab"
 
-  def install
-    bin.install "ecs-tool"
+      def install
+        bin.install "ecs-tool"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/springload/ecs-tool/releases/download/1.9.1/ecs-tool_1.9.1_linux_amd64.tar.gz"
+      sha256 "60aa43540df7beb66e6a593c3ade51aa88e486e16c40946965a6011873473b18"
+
+      def install
+        bin.install "ecs-tool"
+      end
+    end
   end
 end
