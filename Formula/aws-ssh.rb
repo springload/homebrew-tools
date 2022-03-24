@@ -5,20 +5,20 @@
 class AwsSsh < Formula
   desc ""
   homepage ""
-  version "2.2.6"
+  version "2.2.7"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/springload/aws-ssh/releases/download/v2.2.6/aws-ssh_2.2.6_darwin_arm64.tar.gz"
-      sha256 "2e7713f0efe3c8f48af164a5820d90cf214096dbf6d886ee3722699662441d21"
+      url "https://github.com/springload/aws-ssh/releases/download/v2.2.7/aws-ssh_2.2.7_darwin_arm64.tar.gz"
+      sha256 "b1a019125b269ac5af0e1e4f3f3d7bed57d0c664ece4e55f222751ed5bd9fa93"
 
       def install
         bin.install "aws-ssh"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/springload/aws-ssh/releases/download/v2.2.6/aws-ssh_2.2.6_darwin_amd64.tar.gz"
-      sha256 "ea9e093264a8246f2d7de380fa9df273742597d922b6fbc162f5ee253b86ce35"
+      url "https://github.com/springload/aws-ssh/releases/download/v2.2.7/aws-ssh_2.2.7_darwin_amd64.tar.gz"
+      sha256 "08f0c12524f9df0e366f9d47c08812e10910c3f71383d601bc259774ede73cb8"
 
       def install
         bin.install "aws-ssh"
@@ -27,17 +27,17 @@ class AwsSsh < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/springload/aws-ssh/releases/download/v2.2.6/aws-ssh_2.2.6_linux_arm64.tar.gz"
-      sha256 "8b5c86f3b8697eb1d7547e654eee34ef639a8d006d59ca0a4bbe5e1c587a0095"
+    if Hardware::CPU.intel?
+      url "https://github.com/springload/aws-ssh/releases/download/v2.2.7/aws-ssh_2.2.7_linux_amd64.tar.gz"
+      sha256 "9d6a516899e990a43bfd7f0af3683a5ade4ea32fb502f37357dabd89849d436f"
 
       def install
         bin.install "aws-ssh"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/springload/aws-ssh/releases/download/v2.2.6/aws-ssh_2.2.6_linux_amd64.tar.gz"
-      sha256 "47cd214a833c7a559b8b9cddf49b261c6d1bc622722efcfe3357806ff40b0e32"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/springload/aws-ssh/releases/download/v2.2.7/aws-ssh_2.2.7_linux_arm64.tar.gz"
+      sha256 "eb0c903dea31936bb4db4192a1a2c748a248307bb05dcee789731e706437c8dd"
 
       def install
         bin.install "aws-ssh"
