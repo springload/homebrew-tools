@@ -5,20 +5,20 @@
 class EcsTool < Formula
   desc ""
   homepage ""
-  version "1.9.3"
+  version "1.9.4"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/springload/ecs-tool/releases/download/1.9.3/ecs-tool_1.9.3_darwin_arm64.tar.gz"
-      sha256 "a9448b2f58d4204c82370287fdcca0e05ed307dc14ea79e55b85c18d2e61a51e"
+      url "https://github.com/springload/ecs-tool/releases/download/1.9.4/ecs-tool_1.9.4_darwin_arm64.tar.gz"
+      sha256 "fb059a73788f4e33874a8b4e6a1c4c9826b99c465fba83b42eef291dac8d3a11"
 
       def install
         bin.install "ecs-tool"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/springload/ecs-tool/releases/download/1.9.3/ecs-tool_1.9.3_darwin_amd64.tar.gz"
-      sha256 "f546810ab0f57f6561fe8999d21121c2113857009b32044951bc5a7ae6a892bb"
+      url "https://github.com/springload/ecs-tool/releases/download/1.9.4/ecs-tool_1.9.4_darwin_amd64.tar.gz"
+      sha256 "d40f7d3a66e48ce3b44098bc69bac55a1756efdb4ed6e10d032bfb2981b18dd0"
 
       def install
         bin.install "ecs-tool"
@@ -28,16 +28,16 @@ class EcsTool < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/springload/ecs-tool/releases/download/1.9.3/ecs-tool_1.9.3_linux_arm64.tar.gz"
-      sha256 "17fcf7a877ff2395d8b4aee8b1980884f25f5c94b515a77fe3a22c9027795a84"
+      url "https://github.com/springload/ecs-tool/releases/download/1.9.4/ecs-tool_1.9.4_linux_arm64.tar.gz"
+      sha256 "1ce495b360c1989ef31085570bb4561c3b5b3aa742a836cde13fb67f9dc7af72"
 
       def install
         bin.install "ecs-tool"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/springload/ecs-tool/releases/download/1.9.3/ecs-tool_1.9.3_linux_amd64.tar.gz"
-      sha256 "aa235c4b8287626e6e1d4177c77c95ca45caaa48afe666ea8d2987a0ee40a6f3"
+      url "https://github.com/springload/ecs-tool/releases/download/1.9.4/ecs-tool_1.9.4_linux_amd64.tar.gz"
+      sha256 "511fde33764fac260c796275a25dcb7ee14b55fcb377623d72b13497b82ebfc4"
 
       def install
         bin.install "ecs-tool"
