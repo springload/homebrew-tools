@@ -5,20 +5,20 @@
 class AwsSsh < Formula
   desc ""
   homepage ""
-  version "2.2.8"
+  version "2.2.9"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/springload/aws-ssh/releases/download/v2.2.8/aws-ssh_2.2.8_darwin_arm64.tar.gz"
-      sha256 "7b9041ba24eb1457582ce7f18ffb3e887387d6895528d398233f11fb611c306a"
+      url "https://github.com/springload/aws-ssh/releases/download/v2.2.9/aws-ssh_2.2.9_darwin_arm64.tar.gz"
+      sha256 "bc45365964e037730c15a823318c442b73a264cc0bc9509f6ca96fd4748ec4b5"
 
       def install
         bin.install "aws-ssh"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/springload/aws-ssh/releases/download/v2.2.8/aws-ssh_2.2.8_darwin_amd64.tar.gz"
-      sha256 "631d201ebda1f9ae824414b6f8cceed97e6bfcad08eaa10f452e8d20e686beae"
+      url "https://github.com/springload/aws-ssh/releases/download/v2.2.9/aws-ssh_2.2.9_darwin_amd64.tar.gz"
+      sha256 "048b8d0e7d17b106587afd5b7084062e14e814f3fbcb827d2320d38be848a603"
 
       def install
         bin.install "aws-ssh"
@@ -28,16 +28,16 @@ class AwsSsh < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/springload/aws-ssh/releases/download/v2.2.8/aws-ssh_2.2.8_linux_arm64.tar.gz"
-      sha256 "0524934779fb86ff25e99e1409d0b79f39276ab9a1ed2253a2c3a70b2b6876e5"
+      url "https://github.com/springload/aws-ssh/releases/download/v2.2.9/aws-ssh_2.2.9_linux_arm64.tar.gz"
+      sha256 "4660c4a0a95a6e0d7c145351ad4a3a1349e283abd610cbcb32a4e90242e13b9a"
 
       def install
         bin.install "aws-ssh"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/springload/aws-ssh/releases/download/v2.2.8/aws-ssh_2.2.8_linux_amd64.tar.gz"
-      sha256 "40d84a443c83515c121306359d331ed94cfabc34df7befb17e2f510bbf718f86"
+      url "https://github.com/springload/aws-ssh/releases/download/v2.2.9/aws-ssh_2.2.9_linux_amd64.tar.gz"
+      sha256 "de7d3034b64737cd3a9c6d6fb7895f3c78d5fdcb8ac84909b236e20dadeb99d7"
 
       def install
         bin.install "aws-ssh"
