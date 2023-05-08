@@ -5,20 +5,20 @@
 class EcsTool < Formula
   desc ""
   homepage ""
-  version "1.9.4"
+  version "1.9.5"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/springload/ecs-tool/releases/download/1.9.4/ecs-tool_1.9.4_darwin_arm64.tar.gz"
-      sha256 "fb059a73788f4e33874a8b4e6a1c4c9826b99c465fba83b42eef291dac8d3a11"
+      url "https://github.com/springload/ecs-tool/releases/download/1.9.5/ecs-tool_1.9.5_darwin_arm64.tar.gz"
+      sha256 "e8c09b035dd4630bc5c96df06d87f05a5fc2f106ad2dd8819f54a38e9c0190a7"
 
       def install
         bin.install "ecs-tool"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/springload/ecs-tool/releases/download/1.9.4/ecs-tool_1.9.4_darwin_amd64.tar.gz"
-      sha256 "d40f7d3a66e48ce3b44098bc69bac55a1756efdb4ed6e10d032bfb2981b18dd0"
+      url "https://github.com/springload/ecs-tool/releases/download/1.9.5/ecs-tool_1.9.5_darwin_amd64.tar.gz"
+      sha256 "5d5ade8182c5ca944a8f08896058314c1ed84ddb02d4ab60cffc19ac13a29300"
 
       def install
         bin.install "ecs-tool"
@@ -27,17 +27,17 @@ class EcsTool < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/springload/ecs-tool/releases/download/1.9.4/ecs-tool_1.9.4_linux_arm64.tar.gz"
-      sha256 "1ce495b360c1989ef31085570bb4561c3b5b3aa742a836cde13fb67f9dc7af72"
+    if Hardware::CPU.intel?
+      url "https://github.com/springload/ecs-tool/releases/download/1.9.5/ecs-tool_1.9.5_linux_amd64.tar.gz"
+      sha256 "6427e4be9a52967734cd1282c67eff0601209b41aa59e2413399b517beee5b21"
 
       def install
         bin.install "ecs-tool"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/springload/ecs-tool/releases/download/1.9.4/ecs-tool_1.9.4_linux_amd64.tar.gz"
-      sha256 "511fde33764fac260c796275a25dcb7ee14b55fcb377623d72b13497b82ebfc4"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/springload/ecs-tool/releases/download/1.9.5/ecs-tool_1.9.5_linux_arm64.tar.gz"
+      sha256 "534a48fbdb4cd104462bb4f0d6e4171179cc773e1139ca6a53f9ea2435ee9cd4"
 
       def install
         bin.install "ecs-tool"
