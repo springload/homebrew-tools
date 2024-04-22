@@ -5,20 +5,20 @@
 class EcsTool < Formula
   desc ""
   homepage ""
-  version "1.9.6"
+  version "1.9.8-beta"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/springload/ecs-tool/releases/download/1.9.6/ecs-tool_1.9.6_darwin_arm64.tar.gz"
-      sha256 "8761f34a83f77acddf0755bb07867e2dcf7518145d31c06fef1b6cc2bd97619c"
+    if Hardware::CPU.intel?
+      url "https://github.com/springload/ecs-tool/releases/download/v1.9.8-beta/ecs-tool_1.9.8-beta_darwin_amd64.tar.gz"
+      sha256 "20fb3cf5b6bd5266faa96a7214ba0458424a3e172b0558ce6136b3bc4d19dc47"
 
       def install
         bin.install "ecs-tool"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/springload/ecs-tool/releases/download/1.9.6/ecs-tool_1.9.6_darwin_amd64.tar.gz"
-      sha256 "e52fda0c26a4a24c29f8fa273e3e5f1a381711dd05c455889f16d970747aab32"
+    if Hardware::CPU.arm?
+      url "https://github.com/springload/ecs-tool/releases/download/v1.9.8-beta/ecs-tool_1.9.8-beta_darwin_arm64.tar.gz"
+      sha256 "dc234ba04d7f31b36da6055799e5e8b52a3019edf59d9d2c65ac969fa2fca319"
 
       def install
         bin.install "ecs-tool"
@@ -27,17 +27,17 @@ class EcsTool < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/springload/ecs-tool/releases/download/1.9.6/ecs-tool_1.9.6_linux_arm64.tar.gz"
-      sha256 "f02ebc89744001ad406953440580c6bc461ce452fb81c3be68b780670359f295"
+    if Hardware::CPU.intel?
+      url "https://github.com/springload/ecs-tool/releases/download/v1.9.8-beta/ecs-tool_1.9.8-beta_linux_amd64.tar.gz"
+      sha256 "dce72e3ab3c653cb91337a2a0591d41df3ede0fd9c73fd0c982082bf2cddbaa8"
 
       def install
         bin.install "ecs-tool"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/springload/ecs-tool/releases/download/1.9.6/ecs-tool_1.9.6_linux_amd64.tar.gz"
-      sha256 "912ba4d8105a69c39c0796d141def66e27a48c40dafd94336e81f849798fcd2a"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/springload/ecs-tool/releases/download/v1.9.8-beta/ecs-tool_1.9.8-beta_linux_arm64.tar.gz"
+      sha256 "8f404fe9c799a305d8f52384ba0b5abeda287e08c8a72c080e84e4e38caa2524"
 
       def install
         bin.install "ecs-tool"
