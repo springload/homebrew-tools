@@ -5,20 +5,20 @@
 class EcsTool < Formula
   desc ""
   homepage ""
-  version "1.9.9"
+  version "1.9.10"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/springload/ecs-tool/releases/download/v1.9.9/ecs-tool_1.9.9_darwin_amd64.tar.gz"
-      sha256 "af8b3bb99b3e57e85f0b49fdaab52b563f90c540de3a797a745a52b47f9c2258"
+      url "https://github.com/springload/ecs-tool/releases/download/v1.9.10/ecs-tool_1.9.10_darwin_amd64.tar.gz"
+      sha256 "5e6e5a66804998e01e15669e755aacc2aa6f1ca9e40ed94a84de170a9003ac10"
 
       define_method(:install) do
         bin.install "ecs-tool"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/springload/ecs-tool/releases/download/v1.9.9/ecs-tool_1.9.9_darwin_arm64.tar.gz"
-      sha256 "8e638231c51e93921940e2aa86f00047fbe109f5542d715b42f5d14222d12702"
+      url "https://github.com/springload/ecs-tool/releases/download/v1.9.10/ecs-tool_1.9.10_darwin_arm64.tar.gz"
+      sha256 "6d96b4df4f8e642c917e63bb5008b8756b1e134c8bf930fde382005f3af51b0f"
 
       define_method(:install) do
         bin.install "ecs-tool"
@@ -28,15 +28,15 @@ class EcsTool < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/springload/ecs-tool/releases/download/v1.9.9/ecs-tool_1.9.9_linux_amd64.tar.gz"
-      sha256 "deee4ad22c1e778303c8ca5876cb0fc830540b3fc0fb393e1986622ac417d7b1"
+      url "https://github.com/springload/ecs-tool/releases/download/v1.9.10/ecs-tool_1.9.10_linux_amd64.tar.gz"
+      sha256 "57b0082a5405cd1565955d7199cda78d19ec50d0b42623fa27d1b031fcd8637f"
       define_method(:install) do
         bin.install "ecs-tool"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/springload/ecs-tool/releases/download/v1.9.9/ecs-tool_1.9.9_linux_arm64.tar.gz"
-      sha256 "eb554f8a50a479530fa66a4bb097e2afdfd0be854c0fa112895aa0617d7b2e10"
+      url "https://github.com/springload/ecs-tool/releases/download/v1.9.10/ecs-tool_1.9.10_linux_arm64.tar.gz"
+      sha256 "fe0f790374d93a6ff6f9b67f2c05cd140197813a5262645f77ccf3cf60070ce8"
       define_method(:install) do
         bin.install "ecs-tool"
       end
