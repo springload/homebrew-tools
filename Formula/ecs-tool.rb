@@ -9,16 +9,16 @@ class EcsTool < Formula
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/springload/ecs-tool/releases/download/v1.9.10/ecs-tool_1.9.10_darwin_amd64.tar.gz"
-      sha256 "04154c0b29475575972d5ff08d580068f24d7d97f21d1edc6735d33b000b84d0"
+      url "https://github.com/springload/ecs-tool/releases/download/1.9.10/ecs-tool_1.9.10_darwin_amd64.tar.gz"
+      sha256 "b0dbac7a00a8dfef667c89d2a88ba958ae71c9126704e55f69cd3539205391ae"
 
       define_method(:install) do
         bin.install "ecs-tool"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/springload/ecs-tool/releases/download/v1.9.10/ecs-tool_1.9.10_darwin_arm64.tar.gz"
-      sha256 "3c45b946d58ab230bdc8eb3c99add18e8734788fd2243acc6ec763363b65d74d"
+      url "https://github.com/springload/ecs-tool/releases/download/1.9.10/ecs-tool_1.9.10_darwin_arm64.tar.gz"
+      sha256 "54c1600d9883a7314a74cf7008457c07d3b04eecc3d5c9d2dc55bf474a7d559f"
 
       define_method(:install) do
         bin.install "ecs-tool"
@@ -28,15 +28,15 @@ class EcsTool < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/springload/ecs-tool/releases/download/v1.9.10/ecs-tool_1.9.10_linux_amd64.tar.gz"
-      sha256 "a84c6249194c82b38238c5fea4653416d7295ff2078b442d38ee4620cb5fab4e"
+      url "https://github.com/springload/ecs-tool/releases/download/1.9.10/ecs-tool_1.9.10_linux_amd64.tar.gz"
+      sha256 "705a5ad5e35e83a012451cd1e94bc29ede54598eb7e1a507e361fa3a7846580f"
       define_method(:install) do
         bin.install "ecs-tool"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/springload/ecs-tool/releases/download/v1.9.10/ecs-tool_1.9.10_linux_arm64.tar.gz"
-      sha256 "972244f12949736900225244ed6b0c87871b8530ea74719b03b40436fce0a6a7"
+      url "https://github.com/springload/ecs-tool/releases/download/1.9.10/ecs-tool_1.9.10_linux_arm64.tar.gz"
+      sha256 "0c4953ca895f480f66975fd1551fcb72f50ed3a7d2bd9adde1de42b6d4b2e285"
       define_method(:install) do
         bin.install "ecs-tool"
       end
