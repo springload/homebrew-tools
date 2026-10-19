@@ -5,41 +5,39 @@
 class AwsSsh < Formula
   desc ""
   homepage ""
-  version "2.2.9"
+  version "2.4.1"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/springload/aws-ssh/releases/download/v2.2.9/aws-ssh_2.2.9_darwin_arm64.tar.gz"
-      sha256 "bc45365964e037730c15a823318c442b73a264cc0bc9509f6ca96fd4748ec4b5"
+    if Hardware::CPU.intel?
+      url "https://github.com/springload/aws-ssh/releases/download/v2.4.1/aws-ssh_2.4.1_darwin_amd64.tar.gz"
+      sha256 "48ea6581673a27ddb1af65e85d3cf23a02b0fbb16ad00a378e6e696186b8315f"
 
-      def install
+      define_method(:install) do
         bin.install "aws-ssh"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/springload/aws-ssh/releases/download/v2.2.9/aws-ssh_2.2.9_darwin_amd64.tar.gz"
-      sha256 "048b8d0e7d17b106587afd5b7084062e14e814f3fbcb827d2320d38be848a603"
+    if Hardware::CPU.arm?
+      url "https://github.com/springload/aws-ssh/releases/download/v2.4.1/aws-ssh_2.4.1_darwin_arm64.tar.gz"
+      sha256 "ac14f4f0ad652019d06fbe0c634c1f4f4e9ee2e02c5fad30ae6341071f831b3b"
 
-      def install
+      define_method(:install) do
         bin.install "aws-ssh"
       end
     end
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/springload/aws-ssh/releases/download/v2.2.9/aws-ssh_2.2.9_linux_arm64.tar.gz"
-      sha256 "4660c4a0a95a6e0d7c145351ad4a3a1349e283abd610cbcb32a4e90242e13b9a"
-
-      def install
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/springload/aws-ssh/releases/download/v2.4.1/aws-ssh_2.4.1_linux_amd64.tar.gz"
+      sha256 "266d8d4d3df11f6764377dfae085c8953b7899fed6c6c3e68282e31ff5ab7757"
+      define_method(:install) do
         bin.install "aws-ssh"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/springload/aws-ssh/releases/download/v2.2.9/aws-ssh_2.2.9_linux_amd64.tar.gz"
-      sha256 "de7d3034b64737cd3a9c6d6fb7895f3c78d5fdcb8ac84909b236e20dadeb99d7"
-
-      def install
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/springload/aws-ssh/releases/download/v2.4.1/aws-ssh_2.4.1_linux_arm64.tar.gz"
+      sha256 "4c5b81816662a5ab80707dbe849d32024150da4400a24ae2892aac43e91f122a"
+      define_method(:install) do
         bin.install "aws-ssh"
       end
     end
