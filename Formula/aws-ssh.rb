@@ -5,20 +5,20 @@
 class AwsSsh < Formula
   desc ""
   homepage ""
-  version "2.4.1"
+  version "2.4.2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/springload/aws-ssh/releases/download/v2.4.1/aws-ssh_2.4.1_darwin_amd64.tar.gz"
-      sha256 "48ea6581673a27ddb1af65e85d3cf23a02b0fbb16ad00a378e6e696186b8315f"
+      url "https://github.com/springload/aws-ssh/releases/download/v2.4.2/aws-ssh_2.4.2_darwin_amd64.tar.gz"
+      sha256 "e00a6e54ca378f3e9b33fc7a021f80cbfe54fcd6cd3a40cd88922f5130e80518"
 
       define_method(:install) do
         bin.install "aws-ssh"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/springload/aws-ssh/releases/download/v2.4.1/aws-ssh_2.4.1_darwin_arm64.tar.gz"
-      sha256 "ac14f4f0ad652019d06fbe0c634c1f4f4e9ee2e02c5fad30ae6341071f831b3b"
+      url "https://github.com/springload/aws-ssh/releases/download/v2.4.2/aws-ssh_2.4.2_darwin_arm64.tar.gz"
+      sha256 "0dbdba71108d0e034ff7dba2d30e3dec53706847cd5a812074e26cb902d28a9f"
 
       define_method(:install) do
         bin.install "aws-ssh"
@@ -28,15 +28,15 @@ class AwsSsh < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/springload/aws-ssh/releases/download/v2.4.1/aws-ssh_2.4.1_linux_amd64.tar.gz"
-      sha256 "266d8d4d3df11f6764377dfae085c8953b7899fed6c6c3e68282e31ff5ab7757"
+      url "https://github.com/springload/aws-ssh/releases/download/v2.4.2/aws-ssh_2.4.2_linux_amd64.tar.gz"
+      sha256 "bcc80e46691901bccce8f124c25e1acddd26f829d9d589398d88ba361edccee9"
       define_method(:install) do
         bin.install "aws-ssh"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/springload/aws-ssh/releases/download/v2.4.1/aws-ssh_2.4.1_linux_arm64.tar.gz"
-      sha256 "4c5b81816662a5ab80707dbe849d32024150da4400a24ae2892aac43e91f122a"
+      url "https://github.com/springload/aws-ssh/releases/download/v2.4.2/aws-ssh_2.4.2_linux_arm64.tar.gz"
+      sha256 "3d56eb42f78c624f84ea39f91aeca9a012aa77adcde7a6518672b2e26dfb5a8a"
       define_method(:install) do
         bin.install "aws-ssh"
       end
